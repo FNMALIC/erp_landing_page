@@ -1,116 +1,78 @@
+"use client"
 import { tw } from 'twind';
-import Particles from 'react-particles-js';
-import Arrow from '@/constants/svg/arrow.svg';
 
-const ParticleBg = () => (
-  <Particles
-    params={{
-      particles: {
-        number: {
-          value: 400,
-          density: {
-            enable: true,
-            value_area: 3000,
-          },
-        },
-        line_linked: {
-          enable: false,
-        },
-        move: {
-          direction: `right`,
-          speed: 0.3,
-        },
-        size: {
-          value: 1,
-        },
-        opacity: {
-          anim: {
-            enable: true,
-            speed: 0.5,
-            opacity_min: 0.1,
-          },
-        },
-      },
-      interactivity: {
-        events: {
-          onclick: {
-            enable: false,
-          },
-        },
-      },
-      retina_detect: true,
-    }}
-  />
-);
+import { useEffect, useState } from 'react';
 
-const articles = [
-  {
-    title: `Velit reprehenderit culpa Lorem reprehenderit excepteur ipsum esse.`,
-    image: `/images/case-1.webp`,
-    alt: `Proident pariatur est.`,
-  },
-  {
-    title: `Velit reprehenderit culpa Lorem reprehenderit ipsum esse.`,
-    image: `/images/case-2.webp`,
-    alt: `Proident pariatur est.`,
-  },
-  {
-    title: `Velit reprehenderit culpa Lorem reprehenderit excepteur esse.`,
-    image: `/images/case-3.webp`,
-    alt: `Proident pariatur est.`,
-  },
-];
+const CountdownComponent = () => {
+  // Initialize state variables for each unit of time
+  const [months, setMonths] = useState(0);
+  const [days, setDays] = useState(0);
+  const [hours, setHours] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+  const [seconds, setSeconds] = useState(0);
+  const [message, setMessage] = useState("");
 
-const CasesSection = () => (
-  <section>
-    <div className={tw(`w-full min-h-screen bg-gray-900 relative`)}>
-      <div className={tw(`absolute left-0 top-0 h-screen w-full overflow-hidden`)}>
-        <ParticleBg />
-      </div>
-      <div className={tw(`max-w-7xl mx-4 lg:mx-auto pt-20 lg:pt-40`)}>
-        <h1 className={tw(`text-white text-4xl lg:text-7xl font-bold text-center`)}>What will you build?</h1>
-        <p className={tw(`text-white text-gray-400 text-center text-xl mt-12`)}>
-          Don’t just take our word for it — see what leaders in digital are saying
-        </p>
-        <div className={tw(`mx-auto pt-24`)}>
-          <div className={tw(`w-full flex flex-wrap justify-around`)}>
-            {articles.map((article) => (
-              <div
-                key={article.title}
-                className={tw(
-                  `xl:w-1/3 sm:w-5/12 sm:max-w-xs relative mb-32 lg:mb-20
-                      xl:max-w-sm lg:w-1/2 w-11/12 mx-auto sm:mx-0 cursor-pointer hover:scale-105`,
-                )}
-              >
-                <div className={tw(`h-64 z-20`)}>
-                  <img
-                    src={article.image}
-                    alt={article.alt}
-                    className={tw(`h-full w-full object-cover overflow-hidden rounded`)}
-                    width={400}
-                    height={300}
-                  />
-                </div>
-                <div className={tw(`p-4 shadow-lg w-full mx-auto -mt-8 bg-white rounded-b z-30 relative`)}>
-                  <p className={tw(`uppercase text-sm text-gray-700 text-center pb-1`)}>Case study</p>
-                  <p className={tw(`text-gray-500 text-center pb-1 text-sm`)}>{article.title}</p>
-                </div>
-              </div>
-            ))}
-            <span
-              className={tw(
-                `-mt-8 pb-12 lg:mt-4 flex items-center text-xl
-                text-indigo-400 cursor-pointer z-30 hover:text-indigo-600`,
-              )}
-            >
-              See all case studies
-              <Arrow className={tw(`h-6 w-6 fill-current ml-2`)} />
-            </span>
+  useEffect(() => {
+    const countDownDate = new Date("Jan 01, 2024 00:00:00").getTime();
+
+    // Update the count down every 1 second
+    const interval = setInterval(() => {
+      // Get today's date and time
+      let today = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      let interva = countDownDate - today;
+
+      // Time calculations for days, hours, minutes and seconds
+      setMonths(Math.floor(interva / (1000 * 60 * 60 * 24 * 30)));
+      setDays(30 % Math.floor(interva / (1000 * 60 * 60 * 24)));
+      setHours(Math.floor((interva % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+      setMinutes(Math.floor((interva % (1000 * 60 * 60)) / (1000 * 60)));
+      setSeconds(Math.floor((interva % (1000 * 60)) / 1000));
+
+      console.log(months,days ,minutes ,seconds)
+      // If the count down is finished, write some text
+      if (interva < 0) {
+        clearInterval(interval);
+        setMessage("HAPPY NEW YEAR ! TIME FOR A NEW BEGINNING");
+      }
+    }, 1000);
+
+    // Clear interval on component unmount
+    return () => clearInterval(interval);
+  }, []); // Empty array ensures effect runs only once on mount
+
+  return (
+    <section className={tw(`bg-gray-800 flex items-center justify-center min-h-screen`)}>
+    <div className={tw(`w-full sm:max-w-2xl bg-gray-900 text-white h-[25rem] px-4 rounded py-4`)}>
+      <div id="new" className={tw(`bg-[url('https://static01.nyt.com/images/2022/01/21/us/00xp-Lava-vid-cove-mike-ives-is-has-answers/00xp-Lava-vid-cove-mike-ives-is-has-answers-superJumbo.jpg')] rounded h-full bg-cover`)}>
+        <h2 className={tw(`text-2xl text-center font-semibold text-yellow-300 mb-10 pt-7`)}>{message || "Until New Beginning"}</h2>
+        <div className={tw(`flex justify-around text-center [&>*>h2]:text-xl [&>*>h2]:sm:text-4xl [&>*>h2]:font-bold [&>*>p]:text-sm [&>*>p]:font-semibold text-white`)}>
+          <div>
+            <h2>{months}</h2>
+            <p>Month</p>
+          </div>
+          <div>
+            <h2>{days}</h2>
+            <p>days</p>
+          </div>
+          <div>
+            <h2>{hours}</h2>
+            <p>Hours</p>
+          </div>
+          <div>
+            <h2>{minutes}</h2>
+            <p>Minutes</p>
+          </div>
+          <div>
+            <h2>{seconds}</h2>
+            <p>Seconds</p>
           </div>
         </div>
       </div>
     </div>
   </section>
-);
+  );
+};
 
-export default CasesSection;
+export default CountdownComponent;

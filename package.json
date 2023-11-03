@@ -3,7 +3,6 @@
   "description": "A TypeScript/Next.js theme that includes everything you need to build amazing landing page!",
   "version": "1.0.0",
   "private": true,
-  "author": "Jaakko Kytölä <kytola.jaakko@gmail.com> (jaakkokytola.com)",
   "license": "MIT",
   "keywords": [
     "nextjs",
@@ -21,25 +20,17 @@
     "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
     "postinstall": "husky install"
   },
-  "lint-staged": {
-    "./src/**/*.{ts,js,jsx,tsx}": [
-      "yarn lint --fix",
-      "yarn format"
-    ]
-  },
   "dependencies": {
+    "@emailjs/browser": "3.11.0",
     "@fontsource/inter": "4.2.1",
     "@svgr/webpack": "5.5.0",
     "next": "10.0.7",
     "next-seo": "4.20.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-particles-js": "3.4.1",
     "twind": "0.15.4"
   },
   "devDependencies": {
-    "@commitlint/cli": "11.0.0",
-    "@commitlint/config-conventional": "11.0.0",
     "@types/node": "14.14.28",
     "@types/react": "17.0.2",
     "@types/react-dom": "17.0.1",

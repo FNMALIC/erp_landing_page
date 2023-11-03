@@ -3,22 +3,17 @@ import FeatureSvg from '@/constants/svg/features.svg';
 
 const listItems = [
   {
-    title: `Designers`,
-    description: `Officia et fugiat mollit qui. Dolor elit aliqua voluptate ipsum
-    excepteur cillum consequat consectetur duis magna qui eu consequat occaecat.
-    Deserunt nisi sit.`,
+    title: `Enhanced Workforce Productivity`,
+    description: `Our system streamlines and automates various HR and administrative tasks, such as attendance tracking, leave management, and payroll processing. By automating these processes, 
+    the system reduces manual effort and eliminates errors, enabling employees and HR personnel to focus on more value-added activities. Improved workforce productivity leads to increased efficiency, faster turnaround times, and better utilization of resources, ultimately contributing to revenue growth.`,
   },
   {
-    title: `Developers`,
-    description: `Pariatur consectetur laboris exercitation duis laboris.
-    Commodo duis fugiat magna fugiat et ut anim elit. Tempor aute ex qui
-    tempor tempor.`,
+    title: `Accurate Decision-Making`,
+    description: `Our system provides real-time access to comprehensive data related to employee performance, attendance, and other HR metrics. This data can be analyzed and presented in intuitive dashboards and reports, enabling managers and executives to make informed decisions. By having accurate and up-to-date information, organizations can identify areas for improvement, optimize resource allocation, and make strategic decisions that directly impact revenue generation.`,
   },
   {
-    title: `Product owners`,
-    description: `Ullamco consectetur ipsum eiusmod nisi adipisicing sint anim
-    dolore aute excepteur. Voluptate ea ullamco sunt eu elit qui aliquip.
-    Adipisicing.`,
+    title: `Effective Workforce Planning`,
+    description: `Our  system helps in effective workforce planning by providing insights into employee availability, skills, and performance. With this information, organizations can align their workforce with business needs, ensuring the right people are assigned to the right projects or tasks. This optimization of workforce allocation leads to improved efficiency, reduced downtime, and better customer service. By effectively utilizing their human resources, enterprises can enhance productivity, deliver projects on time, and generate more revenue.`,
   },
 ];
 

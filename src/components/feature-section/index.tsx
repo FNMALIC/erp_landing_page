@@ -15,58 +15,55 @@ const FeatureSection = () => (
           <div className={tw(`w-full border-b md:w-1/2 md:border-r lg:w-1/3 p-8`)}>
             <div className={tw(`flex items-center mb-6`)}>
               <Check width={20} height={20} fill="currentColor" className={tw(`h-6 w-6 text-indigo-500`)} />
-              <div className={tw(`ml-4 text-xl`)}>Increase sales</div>
+              <div className={tw(`ml-4 text-xl`)}>Attendance Tracking</div>
             </div>
             <p className={tw(`leading-loose text-gray-500`)}>
-              Consectetur pariatur irure exercitation sit amet id consectetur consecteturmagna et Lorem labore qui
-              velit.
+            The system helps keep track of when employees arrive and leave work, making it easier to calculate their working hours and manage payroll.
             </p>
           </div>
           <div className={tw(`w-full border-b md:w-1/2 lg:w-1/3 lg:border-r p-8`)}>
             <div className={tw(`flex items-center mb-6`)}>
               <Check width={20} height={20} fill="currentColor" className={tw(`h-6 w-6 text-indigo-500`)} />
-              <div className={tw(`ml-4 text-xl`)}>Enterprise-ready</div>
+              <div className={tw(`ml-4 text-xl`)}>Employee Database</div>
             </div>
             <p className={tw(`leading-loose text-gray-500 `)}>
-              Labore duis pariatur est exercitation laboris cupidatat amet cillum. Amet nisi ullamco.
+              It's like a digital filing cabinet that stores important information about each employee, such as their contact details, work history, skills, and qualifications.
             </p>
           </div>
           <div className={tw(`w-full border-b md:w-1/2 md:border-r lg:w-1/3 lg:border-r-0 p-8`)}>
             <div className="flex items-center mb-6">
               <Check width={20} height={20} fill="currentColor" className={tw(`h-6 w-6 text-indigo-500`)} />
-              <div className={tw(`ml-4 text-xl`)}>Unlimited growth</div>
+              <div className={tw(`ml-4 text-xl`)}>Performance Management</div>
             </div>
             <p className={tw(`leading-loose text-gray-500`)}>
-              Elit deserunt nisi esse duis cupidatat proident sit minim mollit officia pariatur incididunt in tempor.
+            This feature helps evaluate how well employees are doing their jobs, set goals for improvement, provide feedback, and conduct performance reviews. 
             </p>
           </div>
           <div className={tw(`w-full border-b md:w-1/2 lg:w-1/3 lg:border-r lg:border-b-0 p-8`)}>
             <div className={tw(`flex items-center mb-6`)}>
               <Check width={20} height={20} fill="currentColor" className={tw(`h-6 w-6 text-indigo-500`)} />
-              <div className={tw(`ml-4 text-xl`)}>Recommended by experts</div>
+              <div className={tw(`ml-4 text-xl`)}>Leave and Time Off Management</div>
             </div>
             <p className={tw(`leading-loose text-gray-500`)}>
-              Velit sit tempor pariatur quis pariatur incididunt culpa dolor voluptate officia incididunt velit dolore.
+              It simplifies the process of requesting and approving time off, keeping track of how many days employees have taken off and how many they have left.
             </p>
           </div>
           <div className={tw(`w-full border-b md:w-1/2 md:border-r md:border-b-0 lg:w-1/3 lg:border-b-0 p-8`)}>
             <div className={tw(`flex items-center mb-6`)}>
               <Check width={20} height={20} fill="currentColor" className={tw(`h-6 w-6 text-indigo-500`)} />
-              <div className={tw(`ml-4 text-xl`)}>Modern platform</div>
+              <div className={tw(`ml-4 text-xl`)}>Payroll Management</div>
             </div>
             <p className={tw(`leading-loose text-gray-500`)}>
-              Laboris elit consectetur sint nisi eu mollit proident sit magna velit adipisicing consequat amet
-              reprehenderit.
+            It takes care of calculating employees' salaries, benefits, and deductions accurately and on time, ensuring employees are paid correctly.
             </p>
           </div>
           <div className={tw(`w-full md:w-1/2 lg:w-1/3 p-8`)}>
             <div className={tw(`flex items-center mb-6`)}>
               <Check width={20} height={20} fill="currentColor" className={tw(`h-6 w-6 text-indigo-500`)} />
-              <div className={tw(`ml-4 text-xl`)}>Integrations</div>
+              <div className={tw(`ml-4 text-xl`)}>Reporting and Analytics</div>
             </div>
             <p className={tw(`leading-loose text-gray-500`)}>
-              Nostrud excepteur incididunt proident sit nulla ipsum sunt nostrud est esse adipisicing irure officia
-              consectetur.
+            The system generates reports and analyzes data related to employees, attendance, performance, and other important HR information. It helps managers make informed decisions and plan resources effectively.
             </p>
           </div>
         </div>

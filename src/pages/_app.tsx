@@ -5,7 +5,7 @@ import '@fontsource/inter';
 import { setup } from 'twind';
 import twindConfig from '../twind.config';
 
-if (typeof window !== `undefined`) {  
+if (typeof window !== `undefined`) {
   setup(twindConfig);
 }
 
